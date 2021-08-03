@@ -19,7 +19,12 @@
 #include "cdll_int.h"
 
 // Utility Macros
-#if defined(SSDK2007) || defined(SSDK2013)
+#if defined(__GNUG__)
+#define DemRecMsg(color, msg, ...) (ConColorMsg(color, "[Speedrun] " msg, ##__VA_ARGS__))
+#define DemRecMsgSuccess(msg, ...) (DemRecMsg(Color(0, 255, 0, 255), msg, ##__VA_ARGS__))
+#define DemRecMsgWarning(msg, ...) (DemRecMsg(Color(255, 87, 87, 255), msg, ##__VA_ARGS__))
+#define DemRecMsgInfo(msg, ...) (DemRecMsg(Color(255, 165, 0, 255), msg, ##__VA_ARGS__))
+#elif defined(SSDK2007) || defined(SSDK2013)
 #define DemRecMsg(color, msg, ...) (ConColorMsg(color, "[Speedrun] " msg, __VA_ARGS__))
 #define DemRecMsgSuccess(msg, ...) (DemRecMsg(Color(0, 255, 0, 255), msg, __VA_ARGS__))
 #define DemRecMsgWarning(msg, ...) (DemRecMsg(Color(255, 87, 87, 255), msg, __VA_ARGS__))
