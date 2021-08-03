@@ -1,5 +1,12 @@
 # speedrun_demorecord
 
+**This repository adds a Linux Makefile and source-sdk-2013 as a submodule, I am not PRing into Maxxuss' repo, because I am too lazy to fix up the Visual Studio project stuff so that it actually uses the SDK submodule.**
+
+**To download the binary for Linux SteamPipe versions go here: https://github.com/chinese-soup/speedrun-demo-record-unified-linux/releases/tag/0.0.6.4-linux**
+
+
+**Original README.md follows:**
+
 ## Summary
 `speedrun_demorecord` is a simple plugin for games running on the Source Engine used to automatically record demos through map changes, save/loads, and deaths.
 
